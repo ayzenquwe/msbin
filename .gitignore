@@ -1,0 +1,7 @@
+.DS_Store
+.Trashes
+*.swp
+*.lock
+.idea/
+__pycache__
+*.iml

@@ -1,0 +1,1 @@
+Simple decoder for Microsoft binary XML format (MC-NBFX). Suitable for binary SOAP as well (MC-NBFS).
