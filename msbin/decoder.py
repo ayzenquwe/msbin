@@ -18,7 +18,11 @@ def parse(data_bytes):
     data = data_bytes
     index = 0
 
-    return parse_record()
+    try:
+        return parse_record()
+    except:
+        print("Exception while parsing data near position " + str(index))
+        raise
 
 
 def parse_record():
