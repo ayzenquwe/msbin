@@ -130,9 +130,9 @@ def parse_value(record_type):
     elif record_type == VALUE_INT16:
         result = parse_integer(2)
     elif record_type == VALUE_INT32:
-        result = parse_integer(3)
-    elif record_type == VALUE_INT64:
         result = parse_integer(4)
+    elif record_type == VALUE_INT64:
+        result = parse_integer(8)
     elif record_type == VALUE_FLOAT:
         result = parse_float()
     elif record_type == VALUE_DOUBLE:
@@ -153,7 +153,7 @@ def parse_value(record_type):
     elif record_type == VALUE_UNIQUEID:
         result = parse_uniqueid()
     elif record_type == VALUE_UINT64:
-        result = parse_integer(4, False)
+        result = parse_integer(8, False)
     else:
         raise Exception('Value parsing is not implemented, type=' + hex(record_type))
 
