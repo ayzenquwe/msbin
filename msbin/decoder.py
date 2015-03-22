@@ -139,7 +139,10 @@ def parse_value(record_type):
         result = parse_double()
     elif record_type == VALUE_DATETIME:
         # This is not very accurate, because TimeZone is not parsed
-        result = datetime.datetime.fromtimestamp(parse_integer(8, False)/10000000 - 62135596800)
+        try:
+            result = datetime.datetime.fromtimestamp(parse_integer(8, False)/10000000 - 62135596800)
+        except ValueError:
+            result = datetime.datetime.max
     elif record_type == VALUE_CHARS8:
         result = parse_chars(1)
     elif record_type == VALUE_CHARS16:
