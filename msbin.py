@@ -2,12 +2,18 @@
 
 import sys
 import json
-from bson import json_util
+import datetime
 from msbin import decoder
 
 
+def json_serial(obj):
+    if isinstance(obj, datetime.datetime):
+        serial = obj.isoformat()
+        return serial
+
+
 def print_dict(dictionary):
-    print(json.dumps(dictionary, default=json_util.default, indent=2, sort_keys=True))
+    print(json.dumps(dictionary, default=json_serial, indent=2, sort_keys=True))
 
 
 if len(sys.argv) != 2:
