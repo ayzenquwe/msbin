@@ -1,7 +1,7 @@
-Binary XML Decoder
+Python Binary XML Decoder
 ==================
 
-Simple decoder for Microsoft binary XML format (MC-NBFX). Suitable for binary SOAP as well (MC-NBFS).
+Simple decoder for Microsoft binary XML format (MC-NBFX) written in Python. Suitable for binary SOAP as well (MC-NBFS, soap+msbin1).
 Basically, all this decoder does is transforming binary XML bytes into _dictionary_.
 
 Can be used as a standalone script:
